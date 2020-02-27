@@ -55,7 +55,7 @@ if strcmp(Case, 'case 1')
 elseif strcmp(Case, 'case 2')
     devider = 5;
     % Radial Stress
-    yRadial = [-1; -1.45; -1.6]/devider;
+    yRadial = [0; -1.2; -1.6]/devider;
     % Inner point
     t = asin((yRadial(1) - y)/rInner);
     xpointInner = rInner * cos(t) + x;
@@ -66,7 +66,7 @@ elseif strcmp(Case, 'case 2')
     xRadial = [xpointInner; midPoint; xpointOuter]; % [2.2913; 2.8; 3.1129];
     [XRadialPoints, YRadialPoints] = CurveDataPoints(xRadial, yRadial);
     XRadialPoints = [0 XRadialPoints];
-    YRadialPoints = [-1/devider YRadialPoints];
+    YRadialPoints = [0 YRadialPoints];
     % plot(XRadialPoints, YRadialPoints, 'g')
     % Hoop
     % dataPoints2.HoopStress = [-6.54 -5.54 -4.94];
