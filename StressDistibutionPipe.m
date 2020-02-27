@@ -112,6 +112,11 @@ text(XRadialPoints(mRadPoint),YRadialPoints(mRadPoint)-0.25, 'Radial', 'FontSize
 plot(XHoopPoints, YHoopPoints, 'k', 'LineWidth', 1.4)
 % adds the HOOP as a text variable on the graph
 text(XHoopPoints(mHoopPoint),YHoopPoints(mHoopPoint)-0.25, 'Hoop', 'FontSize', 14)
+
+% changes the y axis number by a multiple of devider variable
+set(gca,'YTickLabel',(-4:1:4)*devider)
+% change the viewed location of the schematic
+axis([0 8 -4 4])
 end
 
 % Create a circle and fills it
